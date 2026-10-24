@@ -32,7 +32,7 @@ MODULE_BUILD_FROM_SOURCE := true
 $(call inherit-product, device/generic/common/gsi_system_ext.mk)
 
 # pKVM
-$(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk)
+$(call inherit-product-if-exists, packages/modules/Virtualization/apex/product_packages.mk)
 
 #
 # All components below go to product image
